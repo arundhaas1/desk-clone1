@@ -1,0 +1,59 @@
+.tickettab{
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: white;
+    height: 110px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tickettab:hover{
+    background-color: rgb(244,247,250);
+}
+
+.tab_left{
+    margin-left: 10px;
+}
+
+.tab_owner{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.tab_id{
+    font-size: 11px;
+    color: rgb(124,129,140);
+}
+
+.tab_id>span{
+    margin-left: 3px;
+}
+
+.tab_days{
+    font-size: 13px;
+    margin-top: 7px;
+    color: rgb(124,129,140);
+}
+
+.tab_logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(199,202,219);
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#stss{
+    margin-top: 15px;
+}

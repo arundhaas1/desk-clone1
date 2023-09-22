@@ -1,0 +1,32 @@
+.ticketpage{
+    background-color: rgb(230,235,244);
+    height: 93vh;
+}
+
+.ticketpage_header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+}
+
+.ticketpage_header>p>span{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.choose{
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 6px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.choose:hover{
+    border: 1px solid rgba(193, 187, 187, 0.521);
+}

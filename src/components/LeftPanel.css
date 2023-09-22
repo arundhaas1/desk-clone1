@@ -1,0 +1,129 @@
+.leftpanel{
+    width: 300px;
+    height: 92.9vh;
+    background-color: rgb(44,52,78);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.left_header{
+   display: flex;
+   flex-direction: column;
+   margin-top: 10px;
+   margin-left: 17px;
+}
+
+.header_tit , .header_tit2{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 25px;
+    font-family: sans-serif !important;
+}
+
+.header_tit>p , .header_tit2>p{
+    font-size: 15px;
+    color: rgb(238,239,240);
+    /* letter-spacing: 1.01px; */
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
+.header_tit2{
+    background-color: rgb(55,63,87);
+    height: 40px;
+    width: 100%;
+    margin-left: -17px;
+    padding-left: 15px !important;
+    margin-top: -5px !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.left_search{
+    margin-left: 80px;
+}
+
+.left_search_icon{
+    font-size: 19px !important;
+    margin-left: 10px;
+}
+
+.left_header>h6{
+    margin-right: auto;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(170,174,184);
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.left_header>p{
+    margin-right: auto;
+    margin-left: -17px !important;
+    font-size: 13px; 
+    margin-top: 16px;
+    width: 100%;
+    padding-left: 13px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.alltic{
+    background-color: rgb(55,63,87);
+}
+
+.left_header>p:hover{
+    background-color: rgb(55,63,87);
+}
+
+.caps{
+    font-size: 12px !important;
+}
+
+.left_ico{
+    color: rgb(238,239,240);
+    font-size: 19px !important;
+}
+
+.left_footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_top{
+    margin-bottom: 25px;
+}
+
+.footer_tab{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer_icon{
+    font-size: 18px !important;
+}
+
+.footer_tab>p{
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+
+.footer_bottom{
+    height: 40px;
+    background-color: rgb(55,63,87) ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.bot_icon{
+    font-size: 25px !important;
+}
