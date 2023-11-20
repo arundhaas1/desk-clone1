@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import './RightPanel.css'
 import Ticket from './Ticket'
 import StarIcon from '@mui/icons-material/Star';
+import { connect } from 'react-redux';
 
-function RightPanel({tickets,deleteTicket}) {
+function RightPanel({tickets}) {
     const [count,setCount]=useState(false)
   return (
     <div className='rightpanel'>
@@ -20,11 +21,17 @@ function RightPanel({tickets,deleteTicket}) {
         </div>
         {tickets.map((ticket)=>{
            return(
-            <Ticket deleteTicket={deleteTicket} ticket={ticket} />
+            <Ticket ticket={ticket} />
            )
         })}
     </div>
   )
 }
 
-export default RightPanel
+const mapStateToProps = (state) => {
+    return {
+      tickets: state.tickets,
+    };
+  };
+
+export default connect(mapStateToProps)(RightPanel);

@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TicketPage from './components/addTicket/TicketPage';
 import { useEffect, useState } from 'react';
+
 import TicketDetailview from './components/TicketDetailView/TicketDetailview';
 import UpdateTicket from './components/TicketDetailView/UpdateTicket/UpdateTicket';
 
@@ -32,14 +33,6 @@ function App() {
   }]
   const [tickets,setTickets]=useState(welcome)
 
-  const addTicket=(tickets)=>{
-    setTickets(tickets)
-  }
-
-  const deleteTicket=(id)=>{
-    setTickets(tickets.filter(ticket=>ticket.id !==id) || tickets.filter(ticket=>ticket.id !==parseInt(id)))
-  }
-
   const updateTicket=(ticket)=>{
     const tic1=tickets.filter(tkt=>tkt.id !==parseInt(ticket.id))
     const tic2=tickets.filter(tkt=>tkt.id !==ticket.id)
@@ -52,10 +45,10 @@ function App() {
     <Router className="app">
       <Navigation />
       <Routes>
-        <Route path="/addticket" element={<TicketPage  addTicket={addTicket} tickets={tickets}/>}/>
-        <Route path="/ticketdetail/:id" element={<TicketDetailview  tickets={tickets}/>}/>
-        <Route path="/navigate/:id" element={<UpdateTicket updateTicket={updateTicket}  tickets={tickets}/>}/>
-        <Route exact path="/" element={<Home tickets={tickets} deleteTicket={deleteTicket}/>} />
+        <Route path="/addticket" element={<TicketPage/>}/>
+        <Route path="/ticketdetail/:id" element={<TicketDetailview />}/>
+        <Route path="/navigate/:id" element={<UpdateTicket />}/>
+        <Route exact path="/" element={<Home/>} />
       </Routes>
     </Router>
   );

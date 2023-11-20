@@ -3,6 +3,8 @@ import "./Ticket.css"
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { useNavigate } from 'react-router-dom';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { deleteTicket } from '../ticketAction';
+import { connect } from 'react-redux';
 
 function Ticket({ticket,deleteTicket}) {
   const[deleting,setDeleting]=useState(false)
@@ -38,4 +40,10 @@ function Ticket({ticket,deleteTicket}) {
   )
 }
 
-export default Ticket
+const mapStateToProps = state => {
+  return {
+    tickets: state.tickets,
+  };
+};
+
+export default connect( mapStateToProps, { deleteTicket })(Ticket)
