@@ -5,9 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { deleteTicket } from '../ticketAction';
 import { connect } from 'react-redux';
+import { useEffect } from 'react';
 
-function Ticket({ticket,deleteTicket}) {
+function Ticket({ticket,deleteTicket,selectIds}) {
   const[deleting,setDeleting]=useState(false)
+  const[selected,setSelected]=useState(false);
+
+  useEffect(()=>{
+    if(selectIds.length===0){
+      setSelected(false)
+    }
+  },[selectIds])
   const navigate=useNavigate();
     const sts=(sts)=>{
         if(sts==="Open"){
@@ -18,10 +26,20 @@ function Ticket({ticket,deleteTicket}) {
           return "grey"
         }
     } 
+    const deleteIdArray=(id)=>{
+        if(selectIds.indexOf(id) === -1){
+          setSelected(true);
+          selectIds.push(id);
+        }else{
+          setSelected(false);
+          const index=selectIds.findIndex(item => item.id === id)
+          selectIds.splice(index, 1);
+        }
+    }
   return (
-    <div className='ticket' onMouseLeave={()=>setDeleting(false)} onMouseEnter={()=>setDeleting(true)}>
+    <div className={`ticket ${selected?"selected":"notSelected"}`}  onMouseLeave={()=>setDeleting(false)} onMouseEnter={()=>setDeleting(true)}>
         <div className='logo'>
-          <TwitterIcon />
+          <TwitterIcon  onClick={()=>deleteIdArray(ticket.id)}/>
         </div>
 
         <div  onClick={()=>navigate(`/ticketdetail/${ticket.id}`)} className='details'>

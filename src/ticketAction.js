@@ -19,3 +19,24 @@ export const updateTicket = (ticket) => {
     };
 };
   
+export const bulkDeleteTickets = (ticketIds) => {
+  return {
+    type: 'BULK_DELETE_TICKETS',
+    payload: ticketIds,
+  };
+};
+
+export const bulkCloneTickets = (ticketIds) => {
+  console.log(ticketIds)
+  return {
+    type: 'BULK_CLONE_TICKETS',
+    payload: ticketIds,
+  };
+}
+
+export const bulkUpdateTickets = (ticketIds, updates) => {
+  return {
+    type: 'BULK_UPDATE_TICKETS',
+    payload: { ticketIds, updates },
+  };
+};
