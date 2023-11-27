@@ -50,7 +50,7 @@ function Update({tickets,id,updateTicket}) {
   
     const handleSubmit=()=>{
       if(owner==="" || subject===""|| email==="" || product==="" ||account==="" || des==="" ){
-        alert("fill panra dei")
+        alert("please fill all datas")
       }else if(!email.includes("@") || !email.includes(".com")){
         alert("enter valid email")
       }else{
