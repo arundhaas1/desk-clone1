@@ -7,7 +7,7 @@ function Home({tickets,deleteTicket}) {
   return (
     <div className='app_align'>
           <Leftpanel />
-          <RightPanel deleteTicket={deleteTicket} tickets={tickets} />
+          <RightPanel deleteTicket={deleteTicket}  />
     </div>
   )
 }

@@ -26,6 +26,29 @@
     display: flex;
     align-items: center;
 }
+
+.bulk_actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.bulk_action{
+    font-style: italic;
+    font-size: 12px;
+    padding: 7px;
+    margin-top: 10px;
+    border: 1px solid rgb(227, 224, 224);
+}
+
+.bulk_action:hover{
+    background-color:rgb(106, 173, 248);
+    color: white;
+    border: 1px solid transparent;
+}
+
 .count{
     font-size: 13px;
     cursor: pointer;
@@ -45,4 +68,12 @@
 
 .view:hover{
     background-color: rgb(240, 240, 240);
+}
+
+.none{
+    display: none;
+}
+
+.show{
+    display: flex;
 }

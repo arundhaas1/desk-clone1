@@ -1,0 +1,136 @@
+.multi_rightpanel{
+    /* padding-left: 30px; */
+    /* padding-right: 40px;  */
+    padding-top: 15px;
+    width: 80vw;
+}
+
+.multi_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(235,240,244);
+    padding-bottom: 15px;
+    font-size: 15px ;
+    padding-left: 30px;
+}
+
+.multi_header_left>p>span{
+    font-weight: bold;
+}
+
+.multi_header_right{
+    display: flex;
+    font-size: 14px;
+}
+
+.multi_header_right>p{
+    margin-left: 15px;
+}
+
+.add_lang{
+    border: 1px solid rgb(11,115,235);
+    background-color: rgb(11,115,235);
+    color: white;
+    padding: 4px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add_lang:hover{
+    background-color: white;
+    color: black;
+}
+
+.import , .enabled , .i{
+    color:rgb(11,115,235) ;
+    border: 1px solid rgb(11,115,235);
+    padding: 4px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.enabled , .i{
+    border-color: rgb(212,221,231);
+    color: black;
+}
+
+.i{
+    margin-right: -50px !important;
+}
+
+.multi_info{
+    background-color: rgb(245,248,251,1);
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.multi_info_head{
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: black !important;
+}
+
+
+.multi_info>p{
+    font-size: 14px;
+    width:70%;
+    line-height: 1.8;
+    color: rgb(68,68,68);
+}
+
+.multi_tabs{
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 7px;
+}
+
+.multi_tabs>p{
+    margin-right: 40px;
+    font-size: 13px;
+    color: rgb(102,108,122);
+    padding-bottom: 7px;
+}
+
+.active_multi{
+    color: black !important;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+.multi_data{
+    padding-left: 30px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.data_set{
+    display: flex;
+    flex-direction: column;
+}
+
+.data_header{
+    font-size: 14px;
+    color: rgb(167,167,167);
+}
+
+.data{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.start_export{
+    cursor: pointer;
+    border: 1px solid rgb(11,115,235);
+    background-color: rgb(11,115,235);
+    color: white;
+    padding: 3px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: -10px;
+}

@@ -3,7 +3,7 @@ import './UpdateTicket.css'
 import { useParams } from 'react-router-dom'
 import Update from './Update'
 
-function UpdateTicket({tickets,updateTicket}) {
+function UpdateTicket() {
     const { id } = useParams()
   return (
     <div className='updateticket'>
@@ -11,7 +11,7 @@ function UpdateTicket({tickets,updateTicket}) {
             <p>Tickets / <span> Update Ticket</span>/</p>
             <p className='choose'>Choose Ticket Template</p>
         </div>
-        <Update updateTicket={updateTicket} tickets={tickets} id={id}/>
+        <Update id={id}/>
     </div>
   )
 }

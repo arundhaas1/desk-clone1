@@ -15,6 +15,7 @@ import DesktopWindowsOutlinedIcon from '@mui/icons-material/DesktopWindowsOutlin
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
+import { connect } from 'react-redux';
 
 
 function TicketDetailview({tickets}) {
@@ -170,4 +171,10 @@ function TicketDetailview({tickets}) {
   )
 }
 
-export default TicketDetailview
+const mapStateToProps = (state) => {
+    return {
+      tickets: state.tickets,
+    };
+  };
+
+export default connect(mapStateToProps)(TicketDetailview)

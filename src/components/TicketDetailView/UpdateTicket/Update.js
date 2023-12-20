@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Update.css'
 import { useNavigate } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { updateTicket } from '../../../ticketAction';
 
 function Update({tickets,id,updateTicket}) {
     const navigate=useNavigate()
@@ -48,7 +50,7 @@ function Update({tickets,id,updateTicket}) {
   
     const handleSubmit=()=>{
       if(owner==="" || subject===""|| email==="" || product==="" ||account==="" || des==="" ){
-        alert("fill panra dei")
+        alert("please fill all datas")
       }else if(!email.includes("@") || !email.includes(".com")){
         alert("enter valid email")
       }else{
@@ -63,6 +65,7 @@ function Update({tickets,id,updateTicket}) {
           id:id,
           days:Math.floor(Math.random() * 10)
         }
+        console.log(ticket)
         updateTicket(ticket)
         navigate("/")
       }
@@ -144,4 +147,11 @@ function Update({tickets,id,updateTicket}) {
   )
 }
 
-export default Update
+
+const mapStateToProps = (state) => {
+  return {
+    tickets: state.tickets,
+  };
+};
+
+export default connect(mapStateToProps,{updateTicket})(Update)

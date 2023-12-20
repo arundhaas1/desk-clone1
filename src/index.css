@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: dhas;
-  src: url('/Users/arun-16963/Desktop/desk-clone/public/zoho_puvi_regular-webfont.woff2') format('woff2'),
-       url('/Users/arun-16963/Desktop/desk-clone/public/zoho_puvi_regular-webfont.woff') format('woff');
+  src: url('/public/zoho_puvi_regular-webfont.woff') format('woff2'),
+       url('/public/zoho_puvi_regular-webfont.woff2') format('woff');
 }
 
 body {
