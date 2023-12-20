@@ -20,9 +20,7 @@ function RightPanel({tickets,bulkDeleteTickets,bulkCloneTickets,bulkUpdateTicket
     const [account, setAccount] = useState('');
     const [des, setDes] = useState('');
     const [secId,setSetId]=useState([]);
-
-    useEffect
-
+    
     const selectIds=[]
     const bulkClone=()=>{
       if(selectIds.length===1){
