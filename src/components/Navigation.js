@@ -29,7 +29,7 @@ function Navigation() {
             <CottageTwoToneIcon className='nav_icon'/>
             <p  onClick={()=>navigate("/addticket")}>Add Ticket</p>
             <span>AD</span>
-            <WidgetsTwoToneIcon className='nav_icon'/>
+            <WidgetsTwoToneIcon onClick={()=>navigate("/multilingual")} className='nav_icon'/>
         </div>
     </div>
   )

@@ -1,0 +1,47 @@
+.multi{
+    padding-left: 25px;
+    padding-top: 20px;
+    width: 200px !important;
+    height: 92.9vh;
+    background-color: rgb(44,52,78);
+    color: white;
+}
+
+.multi_search{
+    height: 10px;
+    margin-bottom: 30px;
+}
+
+.multi_search>input{
+    color: rgb(120,128,144);
+    background-color:rgb(44,52,78) ;
+    border: none;
+    border-bottom: 1px solid rgb(75,81,104);
+    padding-bottom: 3px;
+    font-style: italic;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.multi_search>input:hover{
+    border-bottom: 1px solid rgb(60, 82, 171);
+}
+
+.multi_search>input:focus{
+    outline-width: 0;
+}
+
+.multi_channels>h3{
+    font-size: 13px;
+    font-weight: bold !important;
+    border-bottom: 1px solid white ;
+    width: fit-content;
+    margin-bottom: 13px;
+    padding-bottom: 1px;
+}
+
+.multi_channels>p{
+    margin-bottom: 13px;
+    font-size: 14px;
+    color: rgb(213,214,219);
+}

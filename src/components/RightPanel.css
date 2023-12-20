@@ -69,3 +69,11 @@
 .view:hover{
     background-color: rgb(240, 240, 240);
 }
+
+.none{
+    display: none;
+}
+
+.show{
+    display: flex;
+}

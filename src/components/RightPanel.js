@@ -21,13 +21,14 @@ function RightPanel({tickets,bulkDeleteTickets,bulkCloneTickets,bulkUpdateTicket
     const [des, setDes] = useState('');
     const [secId,setSetId]=useState([]);
 
+    useEffect
+
     const selectIds=[]
     const bulkClone=()=>{
-      console.log(selectIds)
       if(selectIds.length===1){
       bulkCloneTickets(selectIds)
       selectIds.length=0;
-    }else{
+    }else {
       alert("Bulk clone not supported")   
     }
   }
@@ -105,7 +106,7 @@ function RightPanel({tickets,bulkDeleteTickets,bulkCloneTickets,bulkUpdateTicket
             <Ticket selectIds={selectIds} ticket={ticket} />
            )
         })}
-        <div className='bulk_actions'>
+        <div className={`bulk_actions ${selectIds.length==0 ? "none" : "show"} `}>
           <p className='bulk_action' onClick={()=>bulkDeleteTickets(selectIds)}>DELETE</p>
           <p className='bulk_action' onClick={bulkUpdate}>UPDATE</p>
           <p className='bulk_action' onClick={bulkClone}>CLONE</p>

@@ -1,0 +1,23 @@
+.locinput{
+    margin-left: 12px;
+    display: flex;
+    margin-bottom: 13px;
+    /* border: 1px solid rgb(49, 50, 51); */
+    background-color: rgb(244,247,250);
+    padding: 10px;
+}
+
+.apiname{
+    width: 200px;
+}
+.tv{
+    width: 200px;
+    margin-left: 20px;
+    border: none;
+    background-color: white;
+    padding: 10px;
+}
+
+.tv:focus{
+    outline-width: 0;
+}

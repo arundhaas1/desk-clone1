@@ -1,0 +1,64 @@
+.fielddata{
+    background: white;
+    height: 93vh;
+    width: 450px;
+    position: absolute ;
+    right: 0;
+    overflow-y: auto; 
+}
+
+.loc_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(244,247,250);
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    position: sticky;
+}
+
+.loc_header>p{
+    color: black;
+    font-weight: bold;
+}
+
+.exit_loc{
+    border: 1px solid rgb(212,221,231);
+    font-size: 15px;
+    padding: 7px;
+    padding-left: 13px;
+    padding-right: 13px;
+    cursor: pointer;
+}
+
+.form_submit{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: sticky;
+    background-color: white;
+    padding-top: 10px;
+}
+
+/* .locedData{
+    background-color: rgb(44,52,78);
+} */
+
+.modules{
+    display: flex;
+    margin: 10px;
+}
+
+.modules>p{
+    margin-right: 15px;
+    border: 1px solid black;
+    padding: 7px 6px;
+    cursor: pointer;
+}
+
+.called{
+    background-color: rgb(135, 182, 230);
+    color: white;
+    border-color: rgb(135, 182, 230) !important;
+}
