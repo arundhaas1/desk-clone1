@@ -1,7 +1,12 @@
 import React from 'react'
 import './RightPanel.css'
 
-function RightPanel({switchOpen}) {
+function RightPanel({switchOpen,fetchDataFromDB}) {
+
+  const test =()=>{
+    switchOpen()
+    fetchDataFromDB("tickets")
+  }
   return (
     <div className='multi_rightpanel'>
       <div className='multi_header'>
@@ -45,7 +50,7 @@ function RightPanel({switchOpen}) {
 
         <div className='data_set'>
             <p className='data_header'>EXPORT</p>
-            <p className='data start_export' onClick={switchOpen}>Start</p>
+            <p className='data start_export' onClick={test}>Start</p>
         </div>
       </div>
     </div>

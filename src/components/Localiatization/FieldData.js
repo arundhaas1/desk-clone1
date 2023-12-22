@@ -2,25 +2,35 @@ import React, { useState } from 'react'
 import './FieldData.css'
 import LocInput from './LocInput'
 
-function FieldData({switchOpen,datas,setDatas}) {
+function FieldData({switchOpen,datas,setDatas,fetchDataFromDB}) {
 
+  const[selectedModule,setSelecetdmoule]=useState("tickets")
+  const data = [];
 
     const updateData = (updatedField) => {
-        const updatedTickets = datas.fields.tickets.map((field) =>
-          field.fieldId === updatedField.fieldId ? updatedField : field
-        );
+      const { fieldId, translatedValue } = updatedField;
+
+      const existingEntryIndex = data.findIndex(entry => entry.fieldId === fieldId);
     
-        setDatas({
-          fields: {
-            tickets: updatedTickets,
-          },
-        });
+      if (existingEntryIndex !== -1) {
+        data[existingEntryIndex].translatedValue = translatedValue;
+      } else {
+        data.push({ fieldId, translatedValue });
+      }
       };
     
       const handleSave = () => {
-        console.log('Saving data:', datas);
+        console.log(data,"datais")
         switchOpen();
       };
+
+      const callApi=(module)=>{
+        if(data.length>0){
+          alert("Save previous contents before switching")
+        }
+        setSelecetdmoule(module);
+        fetchDataFromDB(module)
+      }
   return (
     <div className='fielddata'>
         <div className='loc_header'>
@@ -28,13 +38,12 @@ function FieldData({switchOpen,datas,setDatas}) {
             <p className='exit_loc' onClick={switchOpen}>X</p>
         </div>
         <div className='modules'>
-            <p className='called'>Tickets</p>
-            <p>Contacts</p>
-            <p>Products</p>
+            <p onClick={()=>callApi("tickets")} className={`${selectedModule=="tickets" ?"called":"null"}`}>Tickets</p>
+            <p onClick={()=>callApi("contacts")} className={`${selectedModule=="contacts"?"called":"null"}`}>Contacts</p>
+            <p onClick={()=>callApi("products")} className={`${selectedModule=="products"?"called":"null"}`}>Products</p>
         </div>
         <div className='locedData'>
         {datas.fields.tickets.map(field=>{ 
-            console.log(datas.fields.tickets)
             return(
                 <LocInput field={field} key={field.fieldId} updateData={updateData}/>
             )

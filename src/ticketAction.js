@@ -27,7 +27,6 @@ export const bulkDeleteTickets = (ticketIds) => {
 };
 
 export const bulkCloneTickets = (ticketIds) => {
-  console.log(ticketIds)
   return {
     type: 'BULK_CLONE_TICKETS',
     payload: ticketIds,

@@ -55,8 +55,6 @@ function AddTickets({addTicket,tickets}) {
         id:100+tickets.length,
         days:Math.floor(Math.random() * 10)
       }
-      // tickets.push(ticket)
-      console.log(JSON.stringify(ticket),123456)
       addTicket(ticket)
       navigate("/")
     }
