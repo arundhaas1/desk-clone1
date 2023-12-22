@@ -5,6 +5,7 @@ import RightPanel from './RightPanel'
 import FieldData from './FieldData'
 function Multilingual() {
   const[open,setOpen]=useState(false)
+  const[token,setToken]=useState("")
   const switchOpen=()=>{
     setOpen(!open)
   }
@@ -22,16 +23,16 @@ function Multilingual() {
   });
 
   const fetchDataFromDB=(module)=>{
+    setToken(prompt('Enter oauth token'))
     const url = 'zd/pleasebrovanthuru/api/v1/translationLanguageExports?orgId=19211012';
     const languageCode = 'en_US';
     const type="Field"
-
     fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'orgId': '19211012',
-        'Authorization': `Zoho-oauthtoken 1000.d1b8a516de2959e2e04869c7be836520.ccb0b145d40f370045f69e234140266d`,
+        'Authorization': `Zoho-oauthtoken ${token}`,
       },
       body: JSON.stringify({
         languageCode: languageCode,
